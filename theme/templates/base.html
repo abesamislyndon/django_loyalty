@@ -1,0 +1,27 @@
+{% load static tailwind_tags %}
+<!-- start of html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django App{% endblock %}</title>
+    {% tailwind_css %}
+</head>
+<body>
+<!-- start of body -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class=" bg-black">
+            <h3 class="h-1">Sidebar</h3>        
+        </aside>
+        <!-- main content -->
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+       </main>
+    </div>
+</body>
+<!-- end of body -->
+</html>
+<!-- end of html -->
